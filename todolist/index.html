@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" />
+    <title>Туду-лист</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Туду-лист</h1>
+        <div id="calendar"></div>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Введите задачу..." required>
+            <textarea id="taskDescription" placeholder="Описание задачи..."></textarea>
+            <select id="taskCategory">
+                <option value="Личное">Личное</option>
+                <option value="Работа">Работа</option>
+                <option value="ЗОЖ">ЗОЖ</option>
+            </select>
+            <div>
+                <input type="checkbox" id="deadlineCheckbox"> Добавить срок выполнения
+                <div id="deadlineContainer" style="display: none;">
+                    <input type="datetime-local" id="taskDeadline" />
+                </div>
+            </div>
+            <button id="addTask">Добавить задачу</button>
+        </div>
+
+        <div class="task-counter">Количество задач: <span id="taskCount">0</span></div>
+        <div id="tasksContainer"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
