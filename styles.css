@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #444;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="datetime-local"],
+select {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+    transition: border 0.3s, background 0.3s;
+    appearance: none; /* Убираем стандартный стиль */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23ffffff"/></svg>'); /* Стрелка вниз */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 10px;
+}
+
+select:focus {
+    border-color: #ffa500;
+    background-color: #444;
+    outline: none; /* Убираем стандартную обводку */
+}
+
+
+input:focus{
+    border-color: #ffa500;
+    background-color: #444;
+    outline: none; /* Убираем стандартную обводку */
+}
+button {
+    padding: 10px 15px;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff8c00;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+li:hover {
+    background-color: #444;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.overdue {
+    background-color: #ff4c4c;
+    color: #ffffff;
+}
+
+#toggleTheme {
+    background-color: transparent;
+    border: none;
+    color: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#toggleTheme:hover {
+    color: #ffa500;
+}
+#customCategoryInput {
+    width: calc(100% - 12px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #3a3a3a;
+    color: #f5f5f5;
+    display: none; /* По умолчанию скрыто */
+}
