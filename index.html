@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Planner</h1>
+            <button id="toggleTheme">🌙</button>
+        </header>
+        <input type="text" id="taskInput" placeholder="Введите задачу...">
+        <select id="categorySelect">
+            <option value="Работа">Работа</option>
+            <option value="Личное">Личное</option>
+            <option value="ЗОЖ">ЗОЖ</option>
+            <option value="Свой">Создать свою</option>
+        </select>
+        <input type="text" id="customCategoryInput" placeholder="Введите имя категории" >
+        <input type="datetime-local" id="deadlineInput">
+        <button id="addTaskBtn">Добавить задачу</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
